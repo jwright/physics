@@ -1,8 +1,9 @@
 defmodule PhysicsTest do
   use ExUnit.Case
-  doctest Physics
+  doctest Physics.Rocketry
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  test "escape_velocity for earth" do
+    v = Physics.Rocketry.escape_velocity :earth
+    assert v == 11.2
   end
 end
